@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate to NGO</title>
+    <style>
+        /* Your CSS styling remains unchanged */
+
+        /* ... */
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Donate to NGO</h1>
+        <p>Your contribution makes a difference</p>
+    </header>
+
+    <section>
+        <h2>Choose Amount to Donate</h2>
+        <table>
+            <tr>
+                <th>Amount (â¹)</th>
+                <th>Action</th>
+            </tr>
+            <tr>
+                <td>50</td>
+                <td><button onclick="donate(50)">Donate â¹50</button></td>
+            </tr>
+            <tr>
+                <td>100</td>
+                <td><button onclick="donate(100)">Donate â¹100</button></td>
+            </tr>
+            <tr>
+                <td>500</td>
+                <td><button onclick="donate(500)">Donate â¹500</button></td>
+            </tr>
+            <tr>
+                <td>1000</td>
+                <td><button onclick="donate(1000)">Donate â¹1000</button></td>
+            </tr>
+            <!-- Add more rows for different amounts -->
+        </table>
+
+        <h2>Add a Comment (Optional)</h2>
+        <textarea id="comment" rows="4" cols="50"></textarea>
+
+        <!-- Replace the placeholder link with your GPay QR code image link -->
+        <a id="gpay-link" href="#" target="_blank"><img src="placeholder-link-to-gpay-qr-code-image.png" alt="GPay QR Code"></a>
+
+        <button onclick="submitDonation()">Submit</button>
+        <div id="thank-you-message"></div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Donate to NGO. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function donate(amount) {
+            document.getElementById('comment').value = ''; // Clear the comment field
+            alert(`You have selected to donate â¹${amount}.`);
+            // Implement logic to generate and display QR code for GPay (using a library or API)
+            // Set the actual link to your GPay QR code image
+            document.getElementById('gpay-link').href = 'actual-link-to-gpay-qr-code-image.png';
+        }
+
+        function submitDonation() {
+            const comment = document.getElementById('comment').value.trim();
+            if (comment !== '') {
+                document.getElementById('thank-you-message').textContent = 'Thanks for your donation!';
+            } else {
+                alert('Please add a comment before submitting.');
+            }
+        }
+    </script>
+</body>
+
+</html>
