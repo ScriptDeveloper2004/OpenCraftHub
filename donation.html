@@ -6,9 +6,89 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Donate to NGO</title>
     <style>
-        /* Your CSS styling remains unchanged */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f8f8f8;
+        }
 
-        /* ... */
+        header {
+            background-color: #3498db;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+        }
+
+        section {
+            padding: 2em;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1em;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #3498db;
+            color: #fff;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 1em;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        #gpay-link img {
+            max-width: 100%;
+            border-radius: 4px;
+            margin-top: 1em;
+        }
+
+        #thank-you-message {
+            margin-top: 1em;
+            color: #27ae60;
+        }
+
+        footer {
+            margin-top: 2em;
+            background-color: #3498db;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+        }
     </style>
 </head>
 
@@ -24,22 +104,27 @@
             <tr>
                 <th>Amount (â¹)</th>
                 <th>Action</th>
+                <th>QR Code</th>
             </tr>
             <tr>
                 <td>50</td>
                 <td><button onclick="donate(50)">Donate â¹50</button></td>
+                <td><img src="placeholder-link-to-gpay-qr-code-image.png" alt="GPay QR Code"></td>
             </tr>
             <tr>
                 <td>100</td>
                 <td><button onclick="donate(100)">Donate â¹100</button></td>
+                <td><img src="placeholder-link-to-gpay-qr-code-image.png" alt="GPay QR Code"></td>
             </tr>
             <tr>
                 <td>500</td>
                 <td><button onclick="donate(500)">Donate â¹500</button></td>
+                <td><img src="placeholder-link-to-gpay-qr-code-image.png" alt="GPay QR Code"></td>
             </tr>
             <tr>
                 <td>1000</td>
                 <td><button onclick="donate(1000)">Donate â¹1000</button></td>
+                <td><img src="placeholder-link-to-gpay-qr-code-image.png" alt="GPay QR Code"></td>
             </tr>
             <!-- Add more rows for different amounts -->
         </table>
@@ -47,7 +132,6 @@
         <h2>Add a Comment (Optional)</h2>
         <textarea id="comment" rows="4" cols="50"></textarea>
 
-        <!-- Replace the placeholder link with your GPay QR code image link -->
         <a id="gpay-link" href="#" target="_blank"><img src="placeholder-link-to-gpay-qr-code-image.png" alt="GPay QR Code"></a>
 
         <button onclick="submitDonation()">Submit</button>
